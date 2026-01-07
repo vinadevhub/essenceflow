@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/essenceflow/essence-flow-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EssenceFlow - Discover Your Perfect Scent</title>
+    <script>
+      // Apply theme immediately before React loads to prevent flash
+      (function() {
+        const theme = localStorage.getItem('theme') || 'system';
+        let effectiveTheme = theme;
+        
+        if (theme === 'system') {
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          effectiveTheme = prefersDark ? 'dark' : 'light';
+        }
+        
+        if (effectiveTheme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/essenceflow/assets/index-DIhuWGnI.js"></script>
+    <link rel="modulepreload" crossorigin href="/essenceflow/assets/vendor-RDb1sSCh.js">
+    <link rel="modulepreload" crossorigin href="/essenceflow/assets/react-vendor-BDITA8B9.js">
+    <link rel="modulepreload" crossorigin href="/essenceflow/assets/admin-B0oqfW2G.js">
+    <link rel="stylesheet" crossorigin href="/essenceflow/assets/index-wSYC7WgM.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
